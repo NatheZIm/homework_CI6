@@ -23,28 +23,29 @@ public class Player {
     }
 
     public void run() {
+        this.x += this.velo_X;
+        this.y += this.velo_Y;
+        this.backToscreen();
+    }
+    private void backToscreen(){
         if (this.x > 1024) {
             this.x = 0;
-            this.y = random.nextInt(600);
+            this.y = random.nextInt(590);
         }
 
-        if (this.x < -1) {
+        if (this.x < 0) {
             this.x = 1024;
-            this.y = random.nextInt(600);
-
+            this.y = random.nextInt(590);
         }
 
         if (this.y >= 600) {
             this.y = 0;
-            this.x = random.nextInt(1024);
-
+            this.x = random.nextInt(1014);
         }
 
         if (this.y <= 0) {
             this.y = 600;
-            this.x = random.nextInt(1024);
-
-
+            this.x = random.nextInt(1014);
         }
     }
 

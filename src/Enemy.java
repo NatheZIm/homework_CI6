@@ -21,7 +21,7 @@ public class Enemy {
         this.velocityY = velocityY;
     }
 
-    public void run(int playerX, int playerY) {
+    public void run() {
         this.x += this.velocityX;
         this.y += this.velocityY;
 
